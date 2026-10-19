@@ -1,0 +1,49 @@
+Complete API endpoint plan
+Your previously used ORDS module is student-erp. Assuming its base path remains /student-erp/, the following is the proposed endpoint structure. The exact URI templates must be checked against your existing ORDS handlers.
+Base URL:
+https://oracleapex.com/ords/selva_space/student_erp/
+
+
+A. Student API
+Method	Endpoint	Purpose
+GET	/students/	Get all students
+GET	/students/:id	Get one student
+POST	/students/	Create a student
+PUT	/students/:id	Update a student
+DELETE	/students/:id	Delete a student
+B. Staff API
+Method	Endpoint	Purpose
+GET	/staff/	Get all staff
+GET	/staff/:id	Get one staff member
+POST	/staff/	Create a staff member
+PUT	/staff/:id	Update staff details
+DELETE	/staff/:id	Delete a staff member
+C. Attendance API
+Method	Endpoint	Purpose
+GET	/attendance/	Get attendance records
+GET	/attendance/:id	Get one attendance record
+POST	/attendance/	Record attendance
+PUT	/attendance/:id	Update attendance
+DELETE	/attendance/:id	Delete attendance
+D. Marks API
+Method	Endpoint	Purpose
+GET	/marks/	Get marks records
+GET	/marks/:id	Get marks by ID
+POST	/marks/	Enter examination marks
+PUT	/marks/:id	Update marks
+DELETE	/marks/:id	Delete marks
+E. Announcements API
+Method	Endpoint	Purpose
+GET	/announcements/	Get all announcements
+GET	/announcements/:id	Get one announcement
+POST	/announcements/	Create an announcement
+PUT	/announcements/:id	Update an announcement
+DELETE	/announcements/:id	Delete an announcement
+F. Application users API
+Method	Endpoint	Purpose
+GET	/users/	List users — admin only
+GET	/users/:id	Get user details
+POST	/users/	Create a user
+PUT	/users/:id	Update user details
+DELETE	/users/:id	Deactivate or delete a user, subject to dependencies
+For APP_USERS, never return password hashes or other authentication secrets. Login and authentication should be designed separately, with appropriate access controls.

@@ -1,0 +1,236 @@
+in: https://oracleapex.com/ords/selva_space/open-api-catalog/student_erp/
+out: {"openapi":"3.0.0","info":{"title":"ORDS generated API for student_erp","version":"1.0.0"},"servers":[{"url":"https://oracleapex.com/ords/selva_space/student_erp"}],"paths":{"/announcements/":{"post":{"description":"Create a new record on student_erp","responses":{"201":{"description":"The successfully created record.","content":{"application/json":{"schema":{"type":"object","properties":{}}}}}},"parameters":[],"requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/student_erp_ITEM"}}}}},"get":{"description":"Retrieve records from student_erp","responses":{"200":{"description":"The queried record.","content":{"application/json":{"schema":{"type":"object","properties":{"items":{"type":"array","items":{"type":"object","properties":{"announcement_id":{"$ref":"#/components/schemas/NUMBER"},"created_at":{"$ref":"#/components/schemas/TIMESTAMP"},"created_by_user_id":{"$ref":"#/components/schemas/NUMBER"},"message":{"$ref":"#/components/schemas/VARCHAR2"},"title":{"$ref":"#/components/schemas/VARCHAR2"}}}}}}}}}},"parameters":[]}},"/announcements/{announcement_id}":{"put":{"description":"Create or update a record on student_erp","responses":{"201":{"description":"The successfully created record.","content":{"application/json":{"schema":{"type":"object","properties":{}}}}},"200":{"description":"The successfully updated record.","content":{"application/json":{"schema":{"type":"object","properties":{}}}}}},"parameters":[{"name":"announcement_id","in":"path","required":true,"schema":{"type":"string","pattern":"^[^/]+$"},"description":"implicit"}],"requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/student_erp_ITEM_2"}}}}},"delete":{"description":"Remove a record from student_erp","responses":{"204":{"description":"Deleted result."}},"parameters":[{"name":"announcement_id","in":"path","required":true,"schema":{"type":"string","pattern":"^[^/]+$"},"description":"implicit"}]}},"/attendance/":{"post":{"description":"Create a new record on student_erp","responses":{"201":{"description":"The successfully created record.","content":{"application/json":{"schema":{"type":"object","properties":{}}}}}},"parameters":[],"requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/student_erp_ITEM_3"}}}}},"get":{"description":"Retrieve records from student_erp","responses":{"200":{"description":"The queried record.","content":{"application/json":{"schema":{"type":"object","properties":{"items":{"type":"array","items":{"type":"object","properties":{"attendance_date":{"$ref":"#/components/schemas/DATE"},"attendance_id":{"$ref":"#/components/schemas/NUMBER"},"created_at":{"$ref":"#/components/schemas/TIMESTAMP"},"marked_by_staff_id":{"$ref":"#/components/schemas/NUMBER"},"status":{"$ref":"#/components/schemas/VARCHAR2"},"student_id":{"$ref":"#/components/schemas/NUMBER"},"subject_id":{"$ref":"#/components/schemas/NUMBER"}}}}}}}}}},"parameters":[]}},"/attendance/{attendance_id}":{"put":{"description":"Create or update a record on student_erp","responses":{"201":{"description":"The successfully created record.","content":{"application/json":{"schema":{"type":"object","properties":{}}}}},"200":{"description":"The successfully updated record.","content":{"application/json":{"schema":{"type":"object","properties":{}}}}}},"parameters":[{"name":"attendance_id","in":"path","required":true,"schema":{"type":"string","pattern":"^[^/]+$"},"description":"implicit"}],"requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/student_erp_ITEM_3"}}}}},"delete":{"description":"Remove a record from student_erp","responses":{"204":{"description":"Deleted result."}},"parameters":[{"name":"attendance_id","in":"path","required":true,"schema":{"type":"string","pattern":"^[^/]+$"},"description":"implicit"}]}},"/marks/":{"post":{"description":"Create a new record on student_erp","responses":{"201":{"description":"The successfully created record.","content":{"application/json":{"schema":{"type":"object","properties":{}}}}}},"parameters":[],"requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/student_erp_ITEM_4"}}}}},"get":{"description":"Retrieve records from student_erp","responses":{"200":{"description":"The queried record.","content":{"application/json":{"schema":{"type":"object","properties":{"items":{"type":"array","items":{"type":"object","properties":{"entered_by_staff_id":{"$ref":"#/components/schemas/NUMBER"},"exam_name":{"$ref":"#/components/schemas/VARCHAR2"},"marks_obtained":{"$ref":"#/components/schemas/NUMBER"},"mark_id":{"$ref":"#/components/schemas/NUMBER"},"max_marks":{"$ref":"#/components/schemas/NUMBER"},"student_id":{"$ref":"#/components/schemas/NUMBER"},"subject_id":{"$ref":"#/components/schemas/NUMBER"}}}}}}}}}},"parameters":[]}},"/marks/{mark_id}":{"delete":{"description":"Remove a record from student_erp","responses":{"204":{"description":"Deleted result."}},"parameters":[{"name":"mark_id","in":"path","required":true,"schema":{"type":"string","pattern":"^[^/]+$"},"description":"implicit"}]},"put":{"description":"Create or update a record on student_erp","responses":{"201":{"description":"The successfully created record.","content":{"application/json":{"schema":{"type":"object","properties":{}}}}},"200":{"description":"The successfully updated record.","content":{"application/json":{"schema":{"type":"object","properties":{}}}}}},"parameters":[{"name":"mark_id","in":"path","required":true,"schema":{"type":"string","pattern":"^[^/]+$"},"description":"implicit"}],"requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/student_erp_ITEM_4"}}}}}},"/staff/":{"get":{"description":"Retrieve a record from student_erp","responses":{"200":{"description":"The queried record.","content":{"application/json":{"schema":{"type":"object","properties":{"email":{"$ref":"#/components/schemas/VARCHAR2"},"full_name":{"$ref":"#/components/schemas/VARCHAR2"},"staff_code":{"$ref":"#/components/schemas/VARCHAR2"},"staff_id":{"$ref":"#/components/schemas/NUMBER"},"user_id":{"$ref":"#/components/schemas/NUMBER"}}}}}}},"parameters":[]},"post":{"description":"Create a new record on student_erp","responses":{"201":{"description":"The successfully created record.","content":{"application/json":{"schema":{"type":"object","properties":{}}}}}},"parameters":[],"requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/student_erp_ITEM_3"}}}}}},"/staff/{staff_id}":{"put":{"description":"Create or update a record on student_erp","responses":{"201":{"description":"The successfully created record.","content":{"application/json":{"schema":{"type":"object","properties":{}}}}},"200":{"description":"The successfully updated record.","content":{"application/json":{"schema":{"type":"object","properties":{}}}}}},"parameters":[{"name":"staff_id","in":"path","required":true,"schema":{"type":"string","pattern":"^[^/]+$"},"description":"implicit"}],"requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/student_erp_ITEM_3"}}}}},"delete":{"description":"Remove a record from student_erp","responses":{"204":{"description":"Deleted result."}},"parameters":[{"name":"staff_id","in":"path","required":true,"schema":{"type":"string","pattern":"^[^/]+$"},"description":"implicit"}]}},"/students/":{"get":{"description":"Retrieve a record from student_erp","responses":{"200":{"description":"The queried record.","content":{"application/json":{"schema":{"type":"object","properties":{"class_name":{"$ref":"#/components/schemas/VARCHAR2"},"email":{"$ref":"#/components/schemas/VARCHAR2"},"full_name":{"$ref":"#/components/schemas/VARCHAR2"},"register_number":{"$ref":"#/components/schemas/VARCHAR2"},"section":{"$ref":"#/components/schemas/VARCHAR2"},"student_id":{"$ref":"#/components/schemas/NUMBER"},"user_id":{"$ref":"#/components/schemas/NUMBER"}}}}}}},"parameters":[]},"post":{"description":"Create a new record on student_erp","responses":{"201":{"description":"The successfully created record.","content":{"application/json":{"schema":{"type":"object","properties":{}}}}}},"parameters":[],"requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/student_erp_ITEM_3"}}}}}},"/students/{student_id}":{"put":{"description":"Create or update a record on student_erp","responses":{"201":{"description":"The successfully created record.","content":{"application/json":{"schema":{"type":"object","properties":{}}}}},"200":{"description":"The successfully updated record.","content":{"application/json":{"schema":{"type":"object","properties":{}}}}}},"parameters":[{"name":"student_id","in":"path","required":true,"schema":{"type":"string","pattern":"^[^/]+$"},"description":"implicit"}],"requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/student_erp_ITEM_3"}}}}},"delete":{"description":"Remove a record from student_erp","responses":{"204":{"description":"Deleted result."}},"parameters":[{"name":"student_id","in":"path","required":true,"schema":{"type":"string","pattern":"^[^/]+$"},"description":"implicit"}]}},"/subjects/":{"get":{"description":"Retrieve records from student_erp","responses":{"200":{"description":"The queried record.","content":{"application/json":{"schema":{"type":"object","properties":{"items":{"type":"array","items":{"type":"object","properties":{"subject_code":{"$ref":"#/components/schemas/VARCHAR2"},"subject_id":{"$ref":"#/components/schemas/NUMBER"},"subject_name":{"$ref":"#/components/schemas/VARCHAR2"}}}}}}}}}},"parameters":[]},"post":{"description":"Create a new record on student_erp","responses":{"201":{"description":"The successfully created record.","content":{"application/json":{"schema":{"type":"object","properties":{}}}}}},"parameters":[],"requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/student_erp_ITEM_5"}}}}}},"/subjects/{subject_id}":{"delete":{"description":"Remove a record from student_erp","responses":{"204":{"description":"Deleted result."}},"parameters":[{"name":"subject_id","in":"path","required":true,"schema":{"type":"string","pattern":"^[^/]+$"},"description":"implicit"}]},"put":{"description":"Create or update a record on student_erp","responses":{"201":{"description":"The successfully created record.","content":{"application/json":{"schema":{"type":"object","properties":{}}}}},"200":{"description":"The successfully updated record.","content":{"application/json":{"schema":{"type":"object","properties":{}}}}}},"parameters":[{"name":"subject_id","in":"path","required":true,"schema":{"type":"string","pattern":"^[^/]+$"},"description":"implicit"}],"requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/student_erp_ITEM_5"}}}}}},"/timetable/":{"get":{"description":"Retrieve records from student_erp","responses":{"200":{"description":"The queried record.","content":{"application/json":{"schema":{"type":"object","properties":{"items":{"type":"array","items":{"type":"object","properties":{"class_name":{"$ref":"#/components/schemas/VARCHAR2"},"day_of_week":{"$ref":"#/components/schemas/VARCHAR2"},"end_time":{"$ref":"#/components/schemas/VARCHAR2"},"section":{"$ref":"#/components/schemas/VARCHAR2"},"staff_id":{"$ref":"#/components/schemas/NUMBER"},"start_time":{"$ref":"#/components/schemas/VARCHAR2"},"subject_id":{"$ref":"#/components/schemas/NUMBER"},"timetable_id":{"$ref":"#/components/schemas/NUMBER"}}}}}}}}}},"parameters":[]},"post":{"description":"Create a new record on student_erp","responses":{"201":{"description":"The successfully created record.","content":{"application/json":{"schema":{"type":"object","properties":{}}}}}},"parameters":[],"requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/student_erp_ITEM_6"}}}}}},"/timetable/{timetable_id}":{"delete":{"description":"Remove a record from student_erp","responses":{"204":{"description":"Deleted result."}},"parameters":[{"name":"timetable_id","in":"path","required":true,"schema":{"type":"string","pattern":"^[^/]+$"},"description":"implicit"}]},"put":{"description":"Create or update a record on student_erp","responses":{"201":{"description":"The successfully created record.","content":{"application/json":{"schema":{"type":"object","properties":{}}}}},"200":{"description":"The successfully updated record.","content":{"application/json":{"schema":{"type":"object","properties":{}}}}}},"parameters":[{"name":"timetable_id","in":"path","required":true,"schema":{"type":"string","pattern":"^[^/]+$"},"description":"implicit"}],"requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/student_erp_ITEM_6"}}}}}}},"components":{"schemas":{"DATE":{"type":"string","format":"date-time","pattern":"^\\d{4}-[01]\\d-[0123]\\dT[012]\\d:[0-5]\\d:[0-5]\\d(.\\d+)?(Z|([-+][012]\\d:[0-5]\\d))$"},"NUMBER":{"type":"number"},"STRING":{"type":"string"},"TIMESTAMP":{"type":"string","format":"date-time","pattern":"^\\d{4}-[01]\\d-[0123]\\dT[012]\\d:[0-5]\\d:[0-5]\\d(.\\d+)?(Z|([-+][012]\\d:[0-5]\\d))$"},"VARCHAR2":{"type":"string"},"student_erp_ITEM":{"properties":{"created_by_user_id":{"type":"string"},"message":{"type":"string"},"title":{"type":"string"}}},"student_erp_ITEM_2":{"properties":{"message":{"type":"string"},"title":{"type":"string"}}},"student_erp_ITEM_3":{"properties":{"body_text":{"type":"string"}}},"student_erp_ITEM_4":{"properties":{"entered_by_staff_id":{"type":"string"},"exam_name":{"type":"string"},"marks_obtained":{"type":"string"},"max_marks":{"type":"string"},"student_id":{"type":"string"},"subject_id":{"type":"string"}}},"student_erp_ITEM_5":{"properties":{"subject_code":{"type":"string"},"subject_name":{"type":"string"}}},"student_erp_ITEM_6":{"properties":{"class_name":{"type":"string"},"day_of_week":{"type":"string"},"end_time":{"type":"string"},"section":{"type":"string"},"staff_id":{"type":"string"},"start_time":{"type":"string"},"subject_id":{"type":"string"}}}}}}
+
+
+get api
+
+in: GET https://oracleapex.com/ords/selva_space/student_erp/students/
+out:
+{
+    "items": [
+        {
+            "student_id": 1,
+            "user_id": 21,
+            "register_number": "REG2026001",
+            "full_name": "Updated Test Student",
+            "email": "updatedstudent@example.com",
+            "class_name": "BCA",
+            "section": "B"
+        }
+    ],
+    "first": {
+        "$ref": "https://oracleapex.com/ords/selva_space/student_erp/students/"
+    }
+}
+in: GET https://oracleapex.com/ords/selva_space/student_erp/staff/
+out: {
+    "items": [
+        {
+            "staff_id": 1,
+            "user_id": 41,
+            "staff_code": "STF001",
+            "full_name": "Updated Test Teacher",
+            "email": "updatedteacher@example.com"
+        }
+    ],
+    "first": {
+        "$ref": "https://oracleapex.com/ords/selva_space/student_erp/staff/"
+    }
+**}
+in: https://oracleapex.com/ords/selva_space/student_erp/attendance/**
+
+out:
+{
+    "items": [],
+    "hasMore": false,
+    "limit": 25,
+    "offset": 0,
+    "count": 0,
+    "links": [
+        {
+            "rel": "self",
+            "href": "https://oracleapex.com/ords/selva_space/student_erp/attendance/"
+        },
+        {
+            "rel": "edit",
+            "href": "https://oracleapex.com/ords/selva_space/student_erp/attendance/"
+        },
+        {
+            "rel": "describedby",
+            "href": "https://oracleapex.com/ords/selva_space/metadata-catalog/student_erp/attendance/"
+        },
+        {
+            "rel": "first",
+            "href": "https://oracleapex.com/ords/selva_space/student_erp/attendance/"
+        }
+    ]
+}
+
+in:https://oracleapex.com/ords/selva_space/student_erp/marks/
+out:
+{
+    "items": [],
+    "hasMore": false,
+    "limit": 25,
+    "offset": 0,
+    "count": 0,
+    "links": [
+        {
+            "rel": "self",
+            "href": "https://oracleapex.com/ords/selva_space/student_erp/marks/"
+        },
+        {
+            "rel": "edit",
+            "href": "https://oracleapex.com/ords/selva_space/student_erp/marks/"
+        },
+        {
+            "rel": "describedby",
+            "href": "https://oracleapex.com/ords/selva_space/metadata-catalog/student_erp/marks/"
+        },
+        {
+            "rel": "first",
+            "href": "https://oracleapex.com/ords/selva_space/student_erp/marks/"
+        }
+    ]
+}
+
+in:https://oracleapex.com/ords/selva_space/student_erp/announcements/
+out:
+{
+    "items": [
+        {
+            "announcement_id": 1,
+            "title": "Internal Examination",
+            "message": "The internal examination schedule will be announced soon.",
+            "created_by_user_id": 1,
+            "created_at": "2026-10-14T13:20:30.759505Z"
+        }
+    ],
+    "hasMore": false,
+    "limit": 25,
+    "offset": 0,
+    "count": 1,
+    "links": [
+        {
+            "rel": "self",
+            "href": "https://oracleapex.com/ords/selva_space/student_erp/announcements/"
+        },
+        {
+            "rel": "edit",
+            "href": "https://oracleapex.com/ords/selva_space/student_erp/announcements/"
+        },
+        {
+            "rel": "describedby",
+            "href": "https://oracleapex.com/ords/selva_space/metadata-catalog/student_erp/announcements/"
+        },
+        {
+            "rel": "first",
+            "href": "https://oracleapex.com/ords/selva_space/student_erp/announcements/"
+        }
+    ]
+}
+
+in: https://oracleapex.com/ords/selva_space/student_erp/subjects/
+out:
+{
+    "items": [
+        {
+            "subject_id": 1,
+            "subject_code": "SUB001",
+            "subject_name": "Computer Science"
+        }
+    ],
+    "hasMore": false,
+    "limit": 25,
+    "offset": 0,
+    "count": 1,
+    "links": [
+        {
+            "rel": "self",
+            "href": "https://oracleapex.com/ords/selva_space/student_erp/subjects/"
+        },
+        {
+            "rel": "edit",
+            "href": "https://oracleapex.com/ords/selva_space/student_erp/subjects/"
+        },
+        {
+            "rel": "describedby",
+            "href": "https://oracleapex.com/ords/selva_space/metadata-catalog/student_erp/subjects/"
+        },
+        {
+            "rel": "first",
+            "href": "https://oracleapex.com/ords/selva_space/student_erp/subjects/"
+        }
+    ]
+}
+
+in:https://oracleapex.com/ords/selva_space/student_erp/timetable/
+out:{
+    "items": [],
+    "hasMore": false,
+    "limit": 25,
+    "offset": 0,
+    "count": 0,
+    "links": [
+        {
+            "rel": "self",
+            "href": "https://oracleapex.com/ords/selva_space/student_erp/timetable/"
+        },
+        {
+            "rel": "edit",
+            "href": "https://oracleapex.com/ords/selva_space/student_erp/timetable/"
+        },
+        {
+            "rel": "describedby",
+            "href": "https://oracleapex.com/ords/selva_space/metadata-catalog/student_erp/timetable/"
+        },
+        {
+            "rel": "first",
+            "href": "https://oracleapex.com/ords/selva_space/student_erp/timetable/"
+        }
+    ]
+}
+
+post api
+
+in:https://oracleapex.com/ords/selva_space/student_erp/students/
+{
+  "username": "student_test_20261018",
+  "password_hash": "REPLACE_WITH_VALID_PASSWORD_HASH",
+  "register_number": "REG20261018TEST",
+  "full_name": "Student API Test",
+  "email": "studenttest20261018@example.com",
+  "class_name": "BCA",
+  "section": "A"
+}
+
+
+in:https://oracleapex.com/ords/selva_space/student_erp/staff/
+{
+  "username": "staff_test_20261018",
+  "password_hash": "REPLACE_WITH_VALID_PASSWORD_HASH",
+  "staff_code": "STF20261018TEST",
+  "full_name": "Staff API Test",
+  "email": "stafftest20261018@example.com"
+}
+
+in:https://oracleapex.com/ords/selva_space/student_erp/subjects/
+
+
+{
+  "subject_code": "SUB20261018",
+  "subject_name": "Database Management Systems"
+}
+
+in:https://oracleapex.com/ords/selva_space/student_erp/timetable/
+{
+  "class_name": "BCA",
+  "section": "A",
+  "subject_id": 1,
+  "staff_id": 1,
+  "day_of_week": "Monday",
+  "start_time": "09:00",
+  "end_time": "10:00"
+}
+
+in:
